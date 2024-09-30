@@ -1,7 +1,5 @@
 package com.example.userscrud.repository;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -22,7 +20,4 @@ public interface UserRepository extends JpaRepository<User, Long> {
 	
 	@Query(value = "DELETE FROM user WHERE name = :name", nativeQuery = true)
 	User deleteByName(String name);
-	
-	
-	List<User> findAllByName(String name);
 }
