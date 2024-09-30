@@ -57,12 +57,26 @@ public class UserController {
 	}
 	
 	//========================
-	/*
+	
 	@DeleteMapping("/delete/{name}")
-	public void deleteUserByName(@PathVariable String name) {
-		userService.deleteUserByName(name);
+	public ResponseEntity<Object> deleteUserByName(@PathVariable String name) {
+	
+		return ResponseEntity.status(HttpStatus.OK).body("Testing");
+		/*
+		List<User> users = userService.findAllByName(name);
+		if(users.size() == 0 || users.size() > 1)
+		{
+			//return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("This name either has duplicates or does not exist.");
+		}
+		else {
+			userService.deleteUserByName(name);
+			//return new ResponseEntity<>(HttpStatus.OK);
+			return ResponseEntity.status(HttpStatus.OK).body("Deleted sucessfully.");
+		}
+		*/		
 	}
-	*/
+	
 	//========================
 	
 	@PostMapping("")
