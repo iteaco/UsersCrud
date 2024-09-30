@@ -62,7 +62,7 @@ public class UserController {
 	public ResponseEntity<Object> deleteUserByName(@PathVariable String name) {
 	
 		return ResponseEntity.status(HttpStatus.OK).body("Testing");
-		/*
+		
 		List<User> users = userService.findAllByName(name);
 		if(users.size() == 0 || users.size() > 1)
 		{
@@ -74,7 +74,7 @@ public class UserController {
 			//return new ResponseEntity<>(HttpStatus.OK);
 			return ResponseEntity.status(HttpStatus.OK).body("Deleted sucessfully.");
 		}
-		*/		
+			
 	}
 	
 	//========================
