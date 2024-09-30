@@ -12,5 +12,6 @@ public interface UserService {
 	void deleteUser(String email);
 	//========================
 	void deleteUserByName(String name);
+	List<User> findAllByName(String name);
 
 }
